@@ -12,20 +12,7 @@ function selectionSort(arr) {
   return sortedArr
 }
 
-let runtime = function(){
-  let startTime = Date.now();
-  for (i = 0; i < 1000; i++){
-    selectionSort([1,2,3]);
-    let longArr = []
-    for (a = 0; a < 100; a++){
-      longArr.push[a]
-    }
-    selectionSort(longArr)
-    }
-    let endTime = Date.now();
-    let runTime = endTime - startTime / 2000
-    return runTime
-}
+
 
 
 if (require.main === module) {
@@ -47,8 +34,18 @@ if (require.main === module) {
   for (let i = 0; i < 100; ++i) {
     longInput.push(Math.random());
   }
-}
 
+const startTime = Date.now();
+  for (i = 0; i < 1000; i++){
+    selectionSort([1,2,3]);
+    selectionSort(longInput)
+    }
+
+let endTime = Date.now();
+let runTime = endTime - startTime / 2000
+console.log(runTime)
+
+  }
 module.exports = selectionSort;
 
 // Sort an array in ascending numerical order. 'Repeatedly finding the minimul element in the array and putting it in the correct location in the sorted array.' Which feels like a hint, since the approach I would have taken would have been more difficult.
