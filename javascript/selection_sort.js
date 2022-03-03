@@ -23,7 +23,7 @@ let runtime = function(){
     selectionSort(longArr)
     }
     let endTime = Date.now();
-    let runTime = endTime - startTime
+    let runTime = endTime - startTime / 2000
     return runTime
 }
 
